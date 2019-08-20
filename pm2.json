@@ -1,0 +1,9 @@
+{
+    "app":[
+        {
+            "name":"report",
+            "script" :"app.js",
+            "cwd":"D:/OA/KOA"
+        }
+    ]
+}

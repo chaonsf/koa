@@ -1,0 +1,105 @@
+<div class="rootQuery">
+    <div class="queryContent">
+        <div class="messageDisplay">
+            <span>报备单信息</span>
+            <span class="through fr"></span>
+            <span class="fr billId"></span>
+        </div>
+        <div class="weui-cells weui-cells_form f12 mt0 examine">
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">类目</label></div>
+                <div class="weui-cell__bd">
+                    <i class="iconfont icon-leimu"></i>
+                    <span class="category" field="SYSV_ATDC_TYPE_DESC"></span>
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">发生日期</label></div>
+                <div class="weui-cell__bd timer">
+                    <i class="iconfont icon-riqi"></i>
+                    <span class="dateTime" field="ATDC_START_DT"></span>
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">地区范围</label></div>
+                <div class="weui-cell__bd">
+                    <i class="iconfont icon-didian"></i>
+                    <span class="areaRange"></span>
+                </div>
+            </div>
+            <div class="weui-cell desctiption">
+                <div class="weui-cell__hd"><label class="weui-label">地点描述</label></div>
+                <div class="weui-cell__bd">
+                    <i class="iconfont icon-didian"></i>
+                    <span class="descriptionArea" field="ATDC_SITE"></span>
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">申请人</label></div>
+                <div class="weui-cell__bd">
+                    <i class="iconfont icon-shenqingren"></i>
+                    <span class="applyerName" field="MEME_NAME"></span>
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">申请时间</label></div>
+                <div class="weui-cell__bd">
+                    <i class="iconfont icon-riqi"></i>
+                    <span class="applyerday" field="ATDC_ENTRY_DT"></span>
+                </div>
+            </div>
+            <div class="weui-cell trip">
+                <div class="weui-cell__hd"><label class="weui-label">预计/修正出差天数</label></div>
+                <div class="weui-cell__bd">
+                    <i class="iconfont icon-tianshu"></i>
+                    <span></span>
+                </div>
+            </div>
+            <div class="weui-cell travel">
+                <div class="weui-cell__hd"><label class="weui-label">预计/修正出差人数</label></div>
+                <div class="weui-cell__bd">
+                    <i class="iconfont icon-renshu"></i>
+                    <span></span>
+                </div>
+            </div>
+            <div class="weui-cell guest">
+                <div class="weui-cell__hd"><label class="weui-label">预计/修正人数</label></div>
+                <div class="weui-cell__bd">
+                    <i class="iconfont icon-renshu"></i>
+                    <span></span>
+                </div>
+            </div>
+            <div class="weui-cell comment">
+                <div class="weui-cell__hd"><label class="weui-label">是由</label></div>
+                <div class="weui-cell__bd">
+                    <i class="iconfont icon-xinxitianxie"></i>
+                    <span field="ATDC_COMMENT"></span>
+                </div>
+            </div>
+            <div class="resultComment">
+                <p class="messageDisplay">结果反馈</p>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">反馈日期</label></div>
+                    <div class="weui-cell__bd timer">
+                        <i class="iconfont icon-riqi"></i>
+                        <span class="resultTime"></span>
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">反馈结果</label></div>
+                    <div class="weui-cell_bd">
+                        <i class="iconfont icon-xinxitianxie"></i>
+                       <span class="resultCommentp"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 审核说明 -->
+        <div class="addComment">
+            <p class="messageDisplay">审核说明</p>
+        </div>
+    </div>
+    <div class="footerBtn btnBack">
+        <span>返回</span>
+     </div>
+</div>

@@ -1,0 +1,9 @@
+{
+    "verbose": true,
+    "ignore": ["node_modules/*","out_log","static"],
+    "execMap": {
+      "": "node"
+      
+    },
+    "watch":["controller","tools","components"]
+  }

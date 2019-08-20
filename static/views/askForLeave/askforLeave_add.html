@@ -1,0 +1,99 @@
+<div class="root bjf5">
+    <div class="weui-cells mt0 f12 query">
+        <div class="weui-cell weui-cell_access">
+             <div class="weui-cell__bd">
+                  查看我的请假记录
+             </div>
+             <div class="weui-cell__ft"></div>
+        </div>
+    </div>
+    <nav>
+        <span>信息填写</span>
+        <span class="fr billId"></span>
+    </nav>
+    <div class="weui-cells weui-cells_form f12 addReport mt0" id='addreport'>
+        <div class="weui-cell weui-cell_select">
+            <div class="weui-cell__hd"><label class="weui-label"><span class="red">*</span>请假类别</label></div>
+            <div class="weui-cell__bd rap">
+                <i class="iconfont icon-leimu"></i>
+                <select class="weui-select category blue" name="selectCompany" field="SYSV_LVLV_TYPE">
+ 
+                </select>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label w95">其他原因</label></div>
+            <div class="weui-cell__bd">
+                <i class="iconfont icon-xinxitianxie"></i>
+                <input type="text" class="weui-input blue" placeholder="请输入其他原因" field="OTHER_TYPE_DESC">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+               
+                <span class="bstrdesc ccc" style="margin-left: 35px">
+                   
+                </span>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label  class="weui-label w95"><span class="red">*</span>休假开始日期</label></div>
+            <div class="weui-cell__bd">
+                <i class="iconfont icon-riqi"></i>
+                <input type="text" class="weui-input blue" field="LVLV_FRM_DTM" readonly>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label for="" class="weui-label w95"><span class="red">*</span>休假结束日期</label></div>
+            <div class="weui-cell__bd">
+                <i class="iconfont icon-riqi"></i>
+                <input type="text" class="weui-input blue" field="LVLV_TO_DTM" readonly>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label for="" class="weui-label w95"><span class="red">*</span>休假时长</label></div>
+            <div class="weui-cell__bd">
+                <i class="iconfont icon-riqi"></i>
+                <input type="number" style="width:50px" class="today weui-input blue" field="LVLV_DAY" placeholder="请输入">
+                <input type="number" style="width:50px" class="toHour weui-input type blue" field="LVLV_HOUR" placeholder="请输入"><span class="type hour">小时</span><span class="ml15 type">换算天数:</span><span class="toDay type">0</span>天
+            </div>
+        </div>
+        <div class="weui-cell comment">
+            <div class="weui-cell__hd"><label class="weui-label w95"><span class="red">*</span>事由</label></div>
+            <div class="weui-cell__bd">
+                <i class="iconfont icon-xinxitianxie"></i>
+                <input class="weui-input blue" placeholder="事由说明" field="LVLV_COMMENT"/>
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label w95"><span class="red">*</span>申请人</label></div>
+            <div class="weui-cell__bd">
+                <i class="iconfont icon-shenqingren"></i>
+                <p class="applyer"></p>
+            </div>
+        </div>
+        <div class="messageDisplay ">
+            <span>上传请假单据</span>
+        </div>
+        <div class="weui-cells weui-cells_form mt0" id="uploaderCustom">
+            <div class="weui-cell pl10">
+                <div class="weui-cell__bd">
+                    <div class="weui-uploader">
+                        <div class="weui-uploader__bd">
+                            <ul class="weui-uploader__files" id="uploaderCustomFiles">
+        
+                            </ul>
+                            <div class="weui-uploader__input-box">
+                                <input id="uploaderCustomInput" class="weui-uploader__input" type="file" accept="image/gif,image/jpeg,image/bmp,image/png,image/jpg"  multiple=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footerBtn">
+        <span class="footerBtnChild btnBack">返回</span>
+        <span class="bjc footerBtnChild submit">提交</span>
+    </div>
+</div>
+

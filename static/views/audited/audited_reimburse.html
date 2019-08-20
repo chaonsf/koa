@@ -1,0 +1,267 @@
+<div class="rootQuery">
+    <div class="queryContent">
+        
+   </div>
+   <div class="footerBtn">
+        <span class="footerBtnChild btnBack">返回</span>
+        <span class="bjc footerBtnChild submit">提交</span>
+    </div>
+</div>
+<script id="AllViewTemplate" type="text/html">
+    {{each $data}}
+    <div  RBRB_KY="{{$value.RBRB_KY}}" class="itemQ">
+        <div class="messageDisplay">
+            <h4 class="fl"><span class="xulieHao">{{$index+1}}</span>{{$value.RBRB_ID_STRING}}</h4>
+            <span class="fr">{{$value.RBRB_STS_DESC}}</span>
+        </div>
+        <div class="weui-cells weui-cells_form examine mt0 f12">
+            <div class="weui-cell">
+                 <div class="weui-cell__hd">
+                    <label class="weui-label lable-type">报销用途</label>
+                 </div>
+                 <div class="weui-cell__bd">
+                    <p class="user">
+                        <i class="iconfont icon-baoxiao"></i>
+                        <span class="black">{{$value.PURPOSE}}</span>
+                    </p>
+                </div>
+            </div>
+            <div class="weui-cell">
+                 <div class="weui-cell__hd">
+                    <label class="weui-label lable-type">报销类型</label>
+                 </div>
+                <div class="weui-cell__bd sm-padding-left-sm">
+                    <p>
+                     <i class="iconfont icon-baoxiao"></i>
+                      <span class="black">{{$value.FEPP_NAME}}</span>
+                    </p>
+                </div>
+            </div>
+            <div class="weui-cell">
+              <div class="weui-cell__hd">
+                <label class=" weui-label lable-type">类型说明</label>
+              </div>
+              <div class="weui-cell__bd">
+                    <i class="iconfont icon-leixingshuoming"></i>
+                 <span>{{$value.OTH_FEPP_DESC}}</span>
+             </div>
+          </div>
+          <div class="weui-cell">
+              <div class="weui-cell__hd">
+                 <label class=" weui-label lable-type">费用</label>
+              </div>
+             <div class="weui-cell__bd">
+                    <i class="iconfont icon-feiyong"></i>
+                 <span>{{$value.RBRB_APPLY_AMT}}</span>
+             </div>
+         </div>
+          <div class="weui-cell">
+             <div class="weui-cell__hd">
+                 <label class="weui-label lable-type">发生日期</label>
+             </div>
+             <div class="weui-cell__bd claim_date">
+                 <label>
+                        <i class="iconfont icon-riqi"></i>
+                    <span>{{$value.RBRB_APPLY_DT}}</span>
+                 </label>
+             </div>
+            </div>
+             <div class="weui-cell">
+                 <div class="weui-cell__hd">
+                    <label class=" weui-label lable-type">收款人</label>
+                </div>
+                 <div class="weui-cell__bd proposer ">
+                        <i class="iconfont icon-shoukuanren"></i>
+                    <span class="black">{{$value.PAYEE_KY_DESC}}</span>
+                </div>
+             </div>
+             <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class=" weui-label lable-type">申请人</label>
+                </div>
+                <div class="weui-cell__bd proposer">
+                        <i class="iconfont icon-shenqingren"></i>
+                    <span class="black">{{$value.MEME_NAME}}</span>
+                 </div>
+            </div>
+            <div class="weui-cell">
+              <div class="weui-cell__hd">
+                 <label class=" weui-label lable-type">申请时间</label>
+             </div>
+            <div class="weui-cell__bd proposer">
+                    <i class="iconfont icon-riqi"></i>
+                <span class="black">{{$value.RBRB_ENTRY_DT}}</span>
+            </div>
+          </div>
+
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                     <label class=" weui-label lable-type">附加单据</label>
+                 </div>
+                <div class="weui-cell__bd receipts">
+                        <i class="iconfont icon-danju"></i>
+                    <span>{{$value.ATDC_ID}}-{{$value.SYSV_ATDC_TYPE_DESC}}</span>
+
+                 </div>
+                </div>
+                <div class="weui-cell">
+                   <div class="weui-cell__hd">
+                         <label class=" weui-label lable-type">备注</label>
+                    </div>
+                    <div class="weui-cell__bd">
+                            <i class="iconfont icon-xinxitianxie"></i>
+                           <span>{{$value.RBRB_COMMENT}}</span>
+                    </div>
+                </div>
+            {{if $value.ATDC_ID}}
+            <div class="messageDisplay">
+                <div>附加单据详情</div>
+            </div>
+              <div class="weui-cell">
+                 <div class="weui-cell__hd">
+                     <label class=" weui-label lable-type">报备时间</label>
+                 </div>
+                 <div class="weui-cell__bd">
+                        <i class="iconfont icon-riqi"></i>
+                    <span>{{$value.ATDC_START_DT}}</span>
+                </div>
+             </div>
+
+            <div class="weui-cell">
+                <div class="weui-cell__hd">
+                    <label class=" weui-label lable-type">详细地址</label>
+                </div>
+                        <div class="weui-cell__bd">
+                             <i class="iconfont icon-didian"></i>
+                            {{if $value.ATDC_SITE==""}}
+                            <span>{{$value.BSTR_NAME}}</span>
+                            {{else}}
+                            <span>{{$value.BSTR_NAME+"("+$value.ATDC_SITE+")"}}</span>
+                            {{/if}}
+                        </div>
+                    </div>
+    
+            {{if $value.SYSV_ATDC_TYPE_DESC=="出差"}}
+                    <div class="weui-cell">
+                        <div class="weui-cell__hd">
+                            <label class=" weui-label lable-type">出差天数</label>
+                        </div>
+                        <div class="weui-cell__bd">
+                            <i class="iconfont icon-tianshu"></i>
+                            <span>{{$value.ATDC_DAY}}</span>
+                        </div>
+                    </div>
+                    <div class="weui-cell">
+                        <div class="weui-cell__hd">
+                            <label class=" weui-label lable-type">出差人数</label>
+                        </div>
+                        <div class="weui-cell__bd">
+                                <i class="iconfont icon-renshu"></i>
+                            <span>{{$value.ATDC_HUMAN_CNT}}</span>
+                        </div>
+                    </div>
+            {{/if}}
+            {{if $value.SYSV_ATDC_TYPE_DESC=="外勤招待"}}
+                    <div class="weui-cell">
+                        <div class="weui-cell__hd">
+                            <label class=" weui-label lable-type">招待人数</label>
+                        </div>
+                        <div class="weui-cell__bd">
+                                <i class="iconfont icon-renshu"></i>
+                            <span>{{$value.ATDC_HUMAN_CNT}}</span>
+                        </div>
+                    </div>
+            {{/if}}
+                    <div class="weui-cell">
+                        <div class="weui-cell__hd">
+                            <label class=" weui-label lable-type">计算费用</label>
+                        </div>
+                        <div class="weui-cell__bd">
+                                <i class="iconfont icon-feiyong"></i>
+                            <span>{{$value.cost}}</span>
+                        </div>
+                    </div>
+            {{/if}}
+        </div>
+        <div class="weui-cells weui-cells_form" id="uploaderCustom">
+            <div class="weui-cell padding0">
+                <div class="weui-cell__bd">
+                    <div class="weui-uploader">
+                        <div class="weui-uploader__hd">
+                            <p class="weui-uploader__title bjtu">查看图片</p>
+                        </div>
+                        <div class="weui-uploader__bd padding10">
+                            <ul class="weui-uploader__files uploaderCustomFiles">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="addComment">
+            <div class='messageDisplay'>审核说明</div>
+        {{if $value.DESC}} {{each $value.DESC value index}}
+        <div class="clearfix borderDesc  f12">
+            <p>
+                <span>{{value.MEME_NAME}}-{{value.STLG_DTM}}</span>
+                <span class="fr">{{value.STLG_STS_DESC}}</span>
+            </p>
+
+            <p class="db">备注 : {{value.STLG_COMMENT}}</p>
+        </div>
+
+        {{/each}} {{/if}}
+       </div>
+       <!-- 以上是审核 -->
+                <div class="weui-cell">
+                    <div class="weui-cell__hd">
+                        <label style="width:auto" class="weui-label audit lable-type">审核</label>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <div class="weui-cells weui-cells_checkbox passCheckbox mt0 f12">
+                            <label class="weui-cell weui-check__label line" for="sp{{$index}}">
+                                <div class="weui-cell__hd">
+                                    <input type="radio" class="weui-check" checked="checked" value="Y" name="checkbox{{$index}}" id="sp{{$index}}">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>通过</p>
+                                </div>
+                            </label>
+                            <label class="weui-cell weui-check__label line" for="sn{{$index}}">
+                                <div class="weui-cell__hd">
+                                    <input type="radio" name="checkbox{{$index}}" value="N" class="weui-check" id="sn{{$index}}">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>不通过</p>
+                                </div>
+                            </label>
+                            <label class="weui-cell weui-check__label line" for="sd{{$index}}">
+                                <div class="weui-cell__hd">
+                                    <input type="radio" name="checkbox{{$index}}" value="D" class="weui-check" id="sd{{$index}}">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>待定</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+        </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd">
+                        <label style="width:auto" class="weui-label auditCommint lable-type">审核备注</label>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <p class="user">
+                                <i class="iconfont icon-xinxitianxie"></i>
+                            <input type="text" field="RBRB_COMMENT" class="weui-input blue" placeholder="请输入" style="width:90%">
+                        </p>
+                    </div>
+                </div>
+            </div>
+    {{/each}}
+</script>

@@ -1,0 +1,88 @@
+<div class="rootQuery">
+     <div class="queryContent">
+        <div class="messageDisplay">
+             <span>加班信息</span>
+             <span class="through fr"></span>
+             <span class="fr billId"></span>
+       </div>
+       <div class="addReport weui-cells weui-cells_form f12 mt0">
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label ccc w95">加班剩余时长</label></div>
+                <div class="weui-cell__bd">
+                    <span class="bstrdesc ccc">
+                    </span>
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label  class="weui-label w95">加班开始时间</label></div>
+                <div class="weui-cell__bd">
+                        <i class="iconfont icon-riqi"></i>
+                     <span field="OTBL_START_DT"></span>
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label for="" class="weui-label w95">加班结束时间</label></div>
+                <div class="weui-cell__bd">
+                        <i class="iconfont icon-riqi"></i>
+                        <span field="OTBL_END_DT"></span>
+                </div>
+            </div>
+            <div class="weui-cell">
+                    <div class="weui-cell__hd"><label for="" class="weui-label w95">加班时长</label></div>
+                    <div class="weui-cell__bd">
+                            <i class="iconfont icon-riqi"></i>
+                        <span field="OTBL_HOUR"></span>小时
+                    </div>
+            </div>
+            <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label w95">申请时间</label></div>
+                    <div class="weui-cell__bd">
+                            <i class="iconfont icon-riqi"></i>
+                        <span field="OTBL_APPLY_DT"></span>
+                    </div>
+            </div>
+            <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label w95">申请人</label></div>
+                    <div class="weui-cell__bd">
+                            <i class="iconfont icon-shenqingren"></i>
+                        <span field="MEME_NAME"></span>
+                    </div>
+            </div>
+            <div class="weui-cell comment">
+                    <div class="weui-cell__hd"><label class="weui-label w95">加班是由</label></div>
+                    <div class="weui-cell__bd">
+                            <i class="iconfont icon-xinxitianxie"></i>
+                        <span field="OTBL_DESC"></span>
+                    </div>
+            </div>
+        </div>
+        <div class="addComment">
+             <p class="messageDisplay">审核说明</p>
+        </div>
+        <div class="messageDisplay shenhekong">
+                <span>信息审核</span>
+        </div>
+        <div class="weui-cells weui-cells_form shenhekong f12">
+                <div class="weui-cell weui-cell_switch line">
+                    <div class="across">是否通过</div>
+                    <div class="weui-cell__ft">
+                        <label for="switchCP" class="weui-switch-cp">
+                            <input id="switchCP" class="weui-switch-cp__input" type="checkbox" checked="checked"/>
+                            <div class="weui-switch-cp__box"></div>
+                        </label>
+                    </div>
+                    <label class="result">审核通过</label>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">审核备注</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input lookThrough" placeholder="备注说明"/>
+                    </div>
+                </div>
+        </div>
+     </div>
+    <div class="footerBtn">
+        <span class="footerBtnChild btnBack">返回</span>
+        <span class="bjc footerBtnChild submit">提交</span>
+    </div>
+</div>

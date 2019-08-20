@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>保服通OA</title>
+    <link href="//at.alicdn.com/t/font_605316_2hylcg4ptya.css" rel="stylesheet">
+    <link href="../static/css/index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="top">
+        <h2 class="dlb back">保服通OA<br><span class="f12 huan">个人信息</span></h2>
+        <div>
+           <span class="userName f14 fb"><%=getData[0].MEME_NAME%></span>
+        </div>
+    </div>
+    <div class="userinfo">
+        <div class="weui-cells f12" id='userInfo'>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">登录名</label></div>
+                <div class="weui-cell__bd">
+                  <span><%=getData[0].MEME_LOGIN%></span>
+                </div>
+              </div>
+              <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">工号</label></div>
+                <div class="weui-cell__bd">
+                   <span><%=getData[0].MEME_EMP_ID%></span>
+                </div>
+              </div>
+              <div class="weui-cell">
+                 <div class="weui-cell__hd"><label class="weui-label">姓名</label></div>
+                 <div class="weui-cell__bd">
+                  <span><%=getData[0].MEME_NAME%></span>
+                  </div>
+              </div>
+              <div class="weui-cell">
+                 <div class="weui-cell__hd"><label class="weui-label">公司账套</label></div>
+                 <div class="weui-cell__bd">
+                   <span><%=getData[0].GPGP_NAME%></span>
+                 </div>
+              </div>
+              <div class="weui-cell">
+                 <div class="weui-cell__hd"><label class="weui-label">部门</label></div>
+                 <div class="weui-cell__bd">
+                   <span><%=getData[0].DPDP_NAME%></span>
+                 </div>
+              </div>
+              <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">职务</label></div>
+                <div class="weui-cell__bd">
+                  <span><%=getData[0].PSPS_NAME%></span>
+                </div>
+              </div>
+              <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">休假情况</label></div>
+                <div class="weui-cell__bd">
+                  <span>年假剩余<%=getData[0].APPLY_AL_DAY%>天，加班时长剩余<%=getData[0].overplus%>小时</span>
+                </div>
+              </div>
+        </div>
+    </div>
+</body>
+<script src='../static/assert/rem.js'></script>
+<script>
+        var  back=document.getElementsByClassName("back")[0];
+         back.onclick=function(){
+              history.go(-1)
+         }
+</script>
+</html>

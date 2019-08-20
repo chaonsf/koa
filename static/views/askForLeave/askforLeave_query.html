@@ -1,0 +1,106 @@
+<div class="rootQuery">
+    <div class="queryContent">
+        <div class="messageDisplay">
+            <span>请假单信息</span>
+            <span class="through fr"></span>
+            <span class="fr billId"></span>
+        </div>
+        <div class="weui-cells weui-cells_form f12 mt0 examine">
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">请假类别</label></div>
+                <div class="weui-cell__bd">
+                    <i class="iconfont icon-leimu"></i>
+                    <span class="category" field="SYSV_LVLV_TYPE_DESC"></span>
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">其他原因</label></div>
+                <div class="weui-cell__bd">
+                    <i class="iconfont icon-xinxitianxie"></i>
+                    <span field="OTHER_TYPE_DESC"></span>
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <span class="bstrdesc ccc">
+                        
+                   </span>
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">填表日期</label></div>
+                <div class="weui-cell__bd timer">
+                    <i class="iconfont icon-riqi"></i>
+                    <span field="LVLV_ENTRY_DT"></span>
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label  class="weui-label">请假开始日期</label></div>
+                <div class="weui-cell__bd">
+                    <i class="iconfont icon-riqi"></i>
+                    <span field="LVLV_FRM_DTM"></span>
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label  class="weui-label">请假结束日期</label></div>
+                <div class="weui-cell__bd">
+                    <i class="iconfont icon-riqi"></i>
+                    <span field="LVLV_TO_DTM"></span>
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label for="" class="weui-label">休假时长</label></div>
+                <div class="weui-cell__bd">
+                    <i class="iconfont icon-riqi"></i>
+                    <span field="LVLV_HOUR"></span>小时，共<span field="toDay"></span>天
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">申请人</label></div>
+                <div class="weui-cell__bd">
+                    <i class="iconfont icon-shenqingren"></i>
+                    <span class="apply" field="MEME_NAME"></span>
+                </div>
+            </div>
+            <div class="weui-cell comment">
+                <div class="weui-cell__hd"><label class="weui-label">备注</label></div>
+                <div class="weui-cell__bd">
+                    <i class="iconfont icon-xinxitianxie"></i>
+                    <span field="LVLV_COMMENT"></span>
+                </div>
+            </div>
+        </div>
+        <!-- 查看图片 -->
+        <div class="weui-cells weui-cells_form" id="uploaderCustom">
+            <div class="weui-cell padding0">
+                <div class="weui-cell__bd">
+                    <div class="weui-uploader">
+                        <div class="weui-uploader__hd">
+                            <p class="weui-uploader__title f12">查看图片</p>
+                        </div>
+                        <div class="weui-uploader__bd">
+                            <ul class="weui-uploader__files uploaderCustomFiles"  id="uploaderCustomFiles">
+
+                            </ul>
+                            <div class="weui-uploader__input-box">
+                                <input id="uploaderCustomInput" class="weui-uploader__input" type="file" accept="image/gif,image/jpeg,image/bmp,image/png,image/jpg"  multiple="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 审核说明 -->
+        <div class="addComment">
+            <p class="messageDisplay">审核说明</p>
+        </div>
+    </div>
+   <!-- 按钮 -->
+   <div class="footerBtn btnBack">
+      <span>返回</span>
+   </div>
+  <div class="footerBtn refer">
+      <span class="footerBtnChild btnBack">返回</span>
+      <span class="bjc footerBtnChild submit">提交</span>
+  </div>
+</div>
